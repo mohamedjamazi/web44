@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de l'ESEN - Accueil</title>
+    <meta name="description" content="Page d'accueil de la bibliothèque de l'ESEN">
+    <meta name="keywords" content="ESEN, bibliothèque, ressources, livres, étudiants">
+    <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Logo de la bibliothèque ESEN" class="logoESEN">
+        <h1 id="titre_principal">Bibliothèque de l'ESEN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Évaluation</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="livres.html">Livres</a></li>
+        </ul>
+        <form name="Recherche" method="get" action="recherche.php" 
+        onsubmit="return controleRecherche(this.recherche);">
+      <input type="search" name="recherche" placeholder="Recherche">
+      <button type="submit" name="envoi">Chercher</button>
+  </form>
+      
+    </nav>
+    <h2>Contact Avec Inscrits</h2>
+    <h3>contact</h3>
+    <p> <a href="#">Si vous êtes déjà inscrit,cliquez ici</a></p>
+    <p><a href="#">Si vous êtes nouveau,cliquez ici</a></p>
+    
+    <form action="contact.php" method="post">
+        <fieldset>
+            <legend>Formulaire de contact</legend>
+            <label>
+                <input type="radio" name="category" value="Informations" checked>
+                Informations
+            </label>
+            <label>
+                <input type="radio" name="category" value="Aide">
+                Aide
+            </label>
+            <label>
+                <input checked type="radio" name="category" value="Suggestion">
+                Suggestion
+            </label>
+            <label>
+                <input type="radio" name="category" value="Remerciements">
+                Remerciements
+            </label>
+            <br>
+            <label for="comments">Commentaires :</label><br>
+            <textarea id="comments" name="comments" rows="3" cols="50"></textarea>
+            <div>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Veuillez me contacter dès que possible, c'est urgent...</label>
+            </div>
+            <button type="submit">Envoyer</button>
+            <button type="reset">Effacer</button>
+        </fieldset>
+    </form>
+    <script src="../JS/controle.js"></script>
+</body>
+<footer>
+    <p>ESEN©2024-2025</p>
+</footer>
+</html>

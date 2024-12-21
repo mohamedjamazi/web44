@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de l'ESEN - Accueil</title>
+    <meta name="description" content="Page d'accueil de la bibliothèque de l'ESEN">
+    <meta name="keywords" content="ESEN, bibliothèque, ressources, livres, étudiants">
+    <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Logo de la bibliothèque ESEN" class="logoESEN">
+        <h1 id="titre_principal">Bibliothèque de l'ESEN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Évaluation</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="livres.html">Livres</a></li>
+        </ul>
+        <form name="Recherche" method="get" action="recherche.php" 
+        onsubmit="return controleRecherche(this.recherche);">
+      <input type="search" name="recherche" placeholder="Recherche">
+      <button type="submit" name="envoi">Chercher</button>
+  </form>
+  
+        
+    </nav>
+    <section>
+        <h2>Recherche de livres dans la bibliothèque</h2>
+        <article>
+            <h3>Choix des critères de recherche</h3>
+            <form action="recherche.php" method="post"> 
+                <div>
+                    <label for="titre">Titre du livre</label>
+                    <input type="text" id="titre" name="titre" placeholder="Titre du livre" required>
+                </div>
+                <div>
+                    <label for="categorie">Catégorie du livre</label>
+                    <select id="categorie" name="categorie" required>
+                        <option value="programmation">Programmation Web</option>
+                        <option value="referencement">Référencement Web</option>
+                        <option value="commerce">Commerce Électronique</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Chercher livres</button>
+                    <button type="reset">Annuler</button>
+                </div>
+            </form>
+        </article>
+    </section>
+    <script src="../JS/controle.js"></script>
+</body>
+<footer>
+    <p>ESEN©2024-2025</p>
+</footer>
+</html>

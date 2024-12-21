@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de l'ESEN - Accueil</title>
+    <meta name="description" content="Page d'accueil de la bibliothèque de l'ESEN">
+    <meta name="keywords" content="ESEN, bibliothèque, ressources, livres, étudiants">
+    <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Logo de la bibliothèque ESEN" class="logoESEN">
+        <h1 id="titre_principal">Bibliothèque de l'ESEN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Évaluation</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="livres.html">Livres</a></li>
+        </ul>
+<form name="Recherche" method="get" action="recherche.php" 
+      onsubmit="return controleRecherche(this.recherche);">
+    <input type="search" name="recherche" placeholder="Recherche">
+    <button type="submit" name="envoi">Chercher</button>
+</form>
+
+        
+    </nav>
+    <section>
+        <h1>Inscription/Connexion</h1>
+        <fieldset>
+        <article>
+    <h2>Déjà Inscrit</h2>
+    <form name="connexion" method="get" action="login_check.php" 
+    onsubmit="return controleMDP(this.password);">
+        <div>
+            <label for="username">Adresse e-mail :</label>
+            <input type="email" id="username" name="username" maxlength="50" size="40" required autofocus>
+        </div>
+        <div>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" maxlength="30" size="30" required>
+        <div>
+            <a href="forgot_password.php">Mot de passe oublié ?</a>
+        </div>
+        <div>
+            <button type="submit">Se connecter</button>
+            <button type="reset">Annuler</button>
+        </div>
+    </form>
+</fieldset>
+</article>
+<fieldset>
+        <article>
+            <h2>Nouveau Client</h2>
+            <form name="creation" method="get" action="creation.php" 
+            onsubmit="return validationInscription(this.password1, this.password2, this.newsletter1, this.newsletter2);">      
+                <div>
+                    <label for="civility">Civilité :</label>
+                    <select id="civility" name="civility" required>
+                        <option value="M">M.</option>
+                        <option value="Mme">Mme</option>
+                        <option value="Mlle">Mlle</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nom">Nom* :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prénom* :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="email">Email* :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="new_password">Mot de passe* :</label>
+                    <input type="password" id="new_password" name="new_password" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Confirmation du mot de passe* :</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <div>
+                    <label for="phone">Tel (num de 8 chiffres)* :</label>
+                    <input placeholder="num tel avec 8 chiffres " type="text" id="phone" name="phone" maxlength="8" pattern="[0-9]{8}" required>
+                </div>
+                <div>
+                    <label for="website">Url de votre site Web :</label>
+                    <input placeholder="http://validator.w3.org/" type="url" id="website" name="website">
+                </div>
+                <div>
+                    <label for="birthdate">Date de naissance :</label>
+                    <input type="date" id="birthdate" name="birthdate" min="1990-01-01" max="2000-01-01" value="1992-01-01" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Je m’abonne aux newsletters de l’ESEN</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Je m’abonne aux newsletters de la bibliothèque l’ESEN</label>
+                </div>
+                <div>
+                    <button type="submit">Créer mon compte</button>
+                    <button type="reset">Annuler</button>
+                </div>
+            </form>
+            <p>* Champs obligatoires</p>
+        </article>
+    </fieldset>
+    </section>
+    <script src="../JS/controle.js"></script>
+</body>
+<footer>
+    <p>ESEN©2024-2025</p>
+</footer>
+</html>

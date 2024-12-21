@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de l'ESEN - Accueil</title>
+    <meta name="description" content="Page d'accueil de la bibliothèque de l'ESEN">
+    <meta name="keywords" content="ESEN, bibliothèque, ressources, livres, étudiants">
+    <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Logo de la bibliothèque ESEN" class="logoESEN">
+        <h1 id="titre_principal">Bibliothèque de l'ESEN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Évaluation</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="livres.html">Livres</a></li>
+        </ul>
+        <form name="Recherche" method="get" action="recherche.php" 
+        onsubmit="return controleRecherche(this.recherche);">
+      <input type="search" name="recherche" placeholder="Recherche">
+      <button type="submit" name="envoi">Chercher</button>
+  </form>
+  
+        
+    </nav>
+    <article>
+        <p>
+         <h3>reglement de la bibliotheque</h3>
+         voici le réglement interne de la <strong>bibliotheque de l'ESEN :</strong><br>
+         <br><strong>la consultation sur page</strong>
+           <ul>
+             <li>periodique</li>
+             <li>document audio-visuels</li>
+             <li>ouvrages de references</li>
+             <li>les projets </li>
+             <li>les ouvrages en un seul exemplaire</li>
+           </ul>
+        </p>
+      </article>
+
+    </section>
+<section>
+    <article>
+    <h4>Liste des livres de la bibliothèque</h4>
+    <table border="4">
+        <caption>Liste des livers de la bibliothéque de l'<strong>esen</strong></caption>
+    <thead>
+        <tr>
+            <th>titre</th>
+            <th>image</th>
+            <th>Auteur(s)</th>
+            <th>date de partution</th>
+            <th>catégorie</th>
+            <th>lien sur le web</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <th>titre</th>
+        <th>image</th>
+        <th>Auteur(s)</th>
+        <th>date de partution</th>
+        <th>catégorie</th>
+        <th>lien sur le web</th>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>HTML5 et css3</td>
+            <td><img src="../livres/1.png" alt="livre "></td>
+            <td>Christophe aubry</td>
+            <td>12/10/2016</td>
+            <td>Programmation Web</td>
+            <td><a href="https://www.eyrolles.com/Informatique/Livre/html5-et-css3-9782409018510/">HTML5 et css3</a></td>
+        </tr>
+            
+            <tr>
+            <td>HTML</td>
+            <td><img src="../livres/2.png" alt="livre"></td>
+            <td>Collectif Eni</td>
+            <td>28/10/2005</td>
+            <td>Programmation Web</td>
+            <td><a href="https://www.eyrolles.com/Informatique/Livre/html-9782746029705/"> HTML</a></td>
+            </tr>
+            
+            <tr>
+            <td>Reussir son référencement web 2015 <br> Stratégies et technique SEO.</td>
+            <td><img src="../livres/9.png" alt="livre "></td>  
+            <td>Olivier andrieu</td>
+            <td>19/02/2015</td>
+            <td>Référencement Web</td>
+            <td><a href="http://www.eyrolles.com/Informatique/Livre/reussir-son-referencement-web2015-9782212141184">SEO</a></td>
+            </tr>
+            
+                <tr>
+            <td> Modern Web Development on the JAMstack
+            </td>
+            <td><img src="../livres/1492058564.jpg" alt="livre "></td>
+            <td>Mathias Biilmann, Phil Hawksworth</td>
+            <td>13 octobre 2020</td>
+            <td>Développement Web, Jamstack, Technologies Web Modernes</td>
+            <td><a href="https://www.oreilly.com/library/view/modern-web-development/9781492058571/">modern web</a></td>
+                </tr>
+                <tr>
+            <td>the pragmatic programmer</td>
+            <td><img src="../livres/images.jpg" alt="livre "></td>
+            <td>Andrew Hunt, David Thomas</td>
+            <td>1999 (1ère édition), réédition 20e anniversaire en 2019</td>
+            <td>Bonnes pratiques de développement, développement logiciel</td>
+            <td><a href="https://pragprog.com/">programmer</a></td>
+            </tr>      
+    </tbody>
+    </article>
+    </section>
+    <script src="../JS/controle.js"></script>
+
+    </body>
+    <footer>
+        <p>ESEN©2024-2025</p>
+    </footer>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque de l'ESEN - Accueil</title>
+    <meta name="description" content="Page d'accueil de la bibliothèque de l'ESEN">
+    <meta name="keywords" content="ESEN, bibliothèque, ressources, livres, étudiants">
+    <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Logo de la bibliothèque ESEN" class="logoESEN">
+        <h1 id="titre_principal">Bibliothèque de l'ESEN</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="recherche.html">Recherche</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Évaluation</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="livres.html">Livres</a></li>
+        </ul>
+        <form name="Recherche" method="get" action="recherche.php" 
+        onsubmit="return controleRecherche(this.recherche);">
+      <input type="search" name="recherche" placeholder="Recherche">
+      <button type="submit" name="envoi">Chercher</button>
+  </form>
+  
+        
+    </nav>
+    <section>
+        <h2>Evaluation Des Livres</h2>
+        <h3>Formulaire d'evaluation des livres</h3>
+        <div>
+            <p> <a href="inscription.html#inscrit">Si vous êtes déjà inscrit,cliquez ici</a>.
+            </p>
+            <p><a href="inscription.html#nouveau">Si vous êtes nouveau,cliquez ici</a>.
+            </p>
+        </div>
+        <form action="evaluation.php" method="post">
+            <fieldset>
+                <legend>Evaluation</legend>
+                <div>
+                    <label for="livre">Choisir un livre :</label>
+                    <select id="livre" name="livre" required>
+                        <option value="HTML5 et CSS3" disabled selected>HTML5 et CSS3</option>
+                        <option value="HTML">HTML</option>
+                        <option value="Réussir son référencement web 2015">Réussir son référencement web 2015</option>
+                    </select>
+                </div>
+                <label for="expertise">Votre domaine d'expertise dans le domaine de ce livre (entre 0 a 5) :</label>
+                <input placeholder="0" type="number" id="expertise" name="expertise" min="0" max="5" step="1">
+                <div>
+                    <label for="evaluation">Évaluation du livre :</label>
+                    <input 
+                        type="range" 
+                        id="evaluation" 
+                        name="evaluation" 
+                        min="0" 
+                        max="5" 
+                        step="1" 
+                        oninput="showValue(this.value)" 
+                        required>
+                    <span id="valeur_evaluation">0</span>
+                </div>
+                <div>
+                    <button type="submit">Enregistrer mon évaluation</button>
+                    <button type="reset">Annuler</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <script>
+        function showValue(newValue) {
+            document.getElementById("valeur_evaluation").innerHTML = newValue;
+        }
+    </script>
+    <script src="../JS/controle.js"></script>
+</body>
+<footer>
+    <p>ESEN©2024-2025</p>
+</footer>
+</html>
